@@ -1,0 +1,10 @@
+
+Aktiekurs Vorhersage Report
+======================
+Startdatum: 2024-02-01
+Vorhersagezeitraum: 30
+Zieldatum: 2024-03-02
+Tatsöchlicher Preis: $6.52
+Vorhergesagter Preis: $7.62
+Absoluter Error: $1.10
+Prozentualer Error: 16.87%
