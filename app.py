@@ -147,13 +147,6 @@ if st.button("Fetch Data and Run Predictions"):
             # DataFrame to Display the results
             results_df = pd.DataFrame(results)
             results_df = results_df.sort_values(by='date', ascending=False)
-            results_df = results_df.rename(columns={
-                'date': 'Datum',
-                'predicted': 'Prediction',
-                'actual': 'Actual',
-                'direction_correct': 'Correct Direction',
-                'absolute_error': 'Absoluter Fehler'
-            })
             
             # Calculate MAE (Mean Absolute Error)
             results_df['absolute_error'] = (results_df['predicted'] - results_df['actual']).abs()
@@ -175,6 +168,15 @@ if st.button("Fetch Data and Run Predictions"):
             st.write(f"MAE: ${mae:,.4f}   #No. Correct Directions: {correct_count}({NUM_PREDICTIONS})")
             
             st.subheader("Prediction Results")
+            
+            # Spalten DataFrame umbenennen
+            results_df = results_df.rename(columns={
+                'date': 'Datum',
+                'predicted': 'Prediction',
+                'actual': 'Actual',
+                'direction_correct': 'Correct Direction',
+                'absolute_error': 'Absoluter Fehler'
+            })
             st.dataframe(results_df[['Datum', 'Prediction', 'Actual', 'Correct Direction', 'Absoluter Fehler']])
         else:
             st.write("Keine Ergebnisse.")
