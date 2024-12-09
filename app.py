@@ -4,6 +4,7 @@ import asyncio
 from openai import AsyncOpenAI
 import random
 import json
+import os
 from helper_functions import open_file, get_stock_price_range, save_to_csv
 
 # ----------------------------------------------------------
@@ -13,7 +14,7 @@ DATA_RANGE = 30
 DAYS_AHEAD = 1   
 NUM_PREDICTIONS = 30
 MAX_CONCURRENT_REQUESTS = 100  
-API_KEY = open_file('KEYS/openaiapikey.txt')  
+API_KEY = os.getenv('OPENAI_API_KEY') 
 
 # ----------------------------------------------------------
 # FUNKTION: EINZELNE VORHERSAGE
