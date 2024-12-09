@@ -144,9 +144,16 @@ if st.button("Fetch Data and Run Predictions"):
         results = asyncio.run(run_predictions(csv_file))
         
         if results:
-            # Display the results
+            # DataFrame to Display the results
             results_df = pd.DataFrame(results)
             results_df = results_df.sort_values(by='date', ascending=False)
+            results_df = results_df.rename(columns={
+                'date': 'Datum',
+                'predicted': 'Prediction',
+                'actual': 'Actual',
+                'direction_correct': 'Correct Direction',
+                'absolute_error': 'Absoluter Fehler'
+            })
             
             # Calculate MAE (Mean Absolute Error)
             results_df['absolute_error'] = (results_df['predicted'] - results_df['actual']).abs()
@@ -168,8 +175,8 @@ if st.button("Fetch Data and Run Predictions"):
             st.write(f"MAE: ${mae:,.4f}   #No. Correct Directions: {correct_count}({NUM_PREDICTIONS})")
             
             st.subheader("Prediction Results")
-            st.dataframe(results_df[['date', 'predicted', 'actual', 'direction_correct', 'absolute_error']])
+            st.dataframe(results_df[['Datum', 'Prediction', 'Actual', 'Correct Direction', 'Absoluter Fehler']])
         else:
-            st.write("No results were returned.")
+            st.write("Keine Ergebnisse.")
     else:
-        st.error("Failed to fetch data.")
+        st.error("FError beim Abholen der Daten.")
