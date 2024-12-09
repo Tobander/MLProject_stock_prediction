@@ -1,6 +1,6 @@
 streamlit
 pandas
-asyncio ; (wird mit Python geliefert, nicht in der requirements.txt nötig)
+asyncio
 openai
 termcolor
 matplotlib
