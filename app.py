@@ -136,7 +136,7 @@ if st.button("Fetch Data and Run Predictions"):
     
     if hist_data is not None and long_name:
         # Save data to CSV
-        csv_file = f"DATA/{ticker}_stock_prices.csv"
+        csv_file = f"Data/{ticker}_stock_prices.csv"
         save_to_csv(hist_data, csv_file, long_name)
         st.success(f"Data fetched and saved for {long_name}!")
         
