@@ -121,7 +121,7 @@ options = [f"{entry['ticker']} - {entry['name']}" for entry in tickers_data]
 st.set_page_config(page_title="TOBANDER Stock App", page_icon="📈")
 
 # Sidebar with Ticker dropdown
-st.sidebar.title("Your Company Bombaklat")
+st.sidebar.title("Choose Company 🇯🇲")
 selected_option = st.sidebar.selectbox("Select a Ticker", options)
 
 # Extract the selected ticker
@@ -135,7 +135,7 @@ end_date = datetime.today()
 start_date = end_date - timedelta(days=365)
 st.sidebar.info(f"Zeitraum: {start_date.strftime('%d.%m.%Y')} bis {end_date.strftime('%d.%m.%Y')}")
 
-st.title(f"Predictions for {ticker} ({long_name})")
+st.title(f"Predictions for {long_name}")
 
 # Button to load data and run predictions
 if st.button("Fetch Data and Run Predictions"):
