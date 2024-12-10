@@ -180,3 +180,26 @@ def create_comparison_plot(actual_price, predicted_price, date, days):
     
     plt.savefig('PLOTS/price_comparison.png')
     plt.close()
+
+# FUNKTION, FÜR Time Series Plot
+def plot_predictions_over_time(results_df):
+    """
+    Erzeugt eine Zeitreihe, die tatsächliche vs. vorhergesagte Preise vergleicht.
+
+    Args:
+        results_df (DataFrame): Enthält die Spalten 'Datum', 'Prediction', und 'Actual'.
+    """
+    results_df['date'] = pd.to_datetime(results_df['Datum'], dayfirst=True)
+    results_df['predicted'] = results_df['Prediction'].str.replace('$', '').str.replace(',', '').astype(float)
+    results_df['actual'] = results_df['Actual'].str.replace('$', '').str.replace(',', '').astype(float)
+
+    fig, ax = plt.subplots(figsize=(16, 10))
+    ax.plot(results_df['date'], results_df['actual'], label='Actual Kurs', marker='o', linestyle='-')
+    ax.plot(results_df['date'], results_df['predicted'], label='Predicted Kurs', marker='x', linestyle='--')
+
+    ax.set_title('Actual vs. Predicted Kurs')
+    ax.set_xlabel('Datum')
+    ax.set_ylabel('Preis (USD)')
+    ax.legend()
+    plt.xticks(rotation=45)
+    return fig

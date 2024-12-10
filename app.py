@@ -5,7 +5,8 @@ from openai import AsyncOpenAI
 import random
 import json
 import os
-from helper_functions import open_file, get_stock_price_range, save_to_csv
+from datetime import datetime, timedelta
+from helper_functions import get_stock_price_range, save_to_csv, plot_predictions_over_time
 
 # ----------------------------------------------------------
 # KONSTANTEN UND KONFIGURATION
@@ -94,6 +95,9 @@ async def run_predictions(csv_file):
     results = await make_predictions(csv_file)
     return results
 
+
+
+
 # ----------------------------------------------------------
 # STREAMLIT APP
 # ----------------------------------------------------------
@@ -108,13 +112,16 @@ def load_tickers_from_json(file_path):
         return []
 
 # Load Tickers von JSON-File
-tickers_data = load_tickers_from_json("Data/ticker_names.json")
+tickers_data = load_tickers_from_json("Data/ticker_jamaican.json")
 
 # Create options for the dropdown
 options = [f"{entry['ticker']} - {entry['name']}" for entry in tickers_data]
 
+# Titel der App ändern
+st.set_page_config(page_title="TOBANDER Stock App", page_icon="📈")
+
 # Sidebar with Ticker dropdown
-st.sidebar.title("Options")
+st.sidebar.title("Your Company Bombaklat")
 selected_option = st.sidebar.selectbox("Select a Ticker", options)
 
 # Extract the selected ticker
@@ -123,9 +130,10 @@ ticker = selected_option.split(" - ")[0]
 # Get the selected ticker's long name
 long_name = next((entry['name'] for entry in tickers_data if entry['ticker'] == ticker), "N/A")
 
-# Default Dates
-start_date = st.sidebar.date_input("Start Date", value=pd.to_datetime("2022-01-01"))
-end_date = st.sidebar.date_input("End Date", value=pd.to_datetime("2022-12-31"))
+# Zeitraum der letzten 12 Monate
+end_date = datetime.today()
+start_date = end_date - timedelta(days=365)
+st.sidebar.info(f"Zeitraum: {start_date.strftime('%d.%m.%Y')} bis {end_date.strftime('%d.%m.%Y')}")
 
 st.title(f"Predictions for {ticker} ({long_name})")
 
@@ -178,6 +186,12 @@ if st.button("Fetch Data and Run Predictions"):
                 'absolute_error': 'Absoluter Fehler'
             })
             st.dataframe(results_df[['Datum', 'Prediction', 'Actual', 'Correct Direction', 'Absoluter Fehler']])
+            
+            # Time Series Plot
+            st.subheader("Actual vs. Predicted Kurse")
+            fig = plot_predictions_over_time(results_df)
+            st.pyplot(fig)
+          
         else:
             st.write("Keine Ergebnisse.")
     else:
