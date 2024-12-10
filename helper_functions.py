@@ -194,8 +194,8 @@ def plot_predictions_over_time(results_df):
     results_df['actual'] = results_df['Actual'].str.replace('$', '').str.replace(',', '').astype(float)
 
     fig, ax = plt.subplots(figsize=(16, 10))
-    ax.plot(results_df['date'], results_df['actual'], label='Actual Kurs', marker='o', linestyle='-')
-    ax.plot(results_df['date'], results_df['predicted'], label='Predicted Kurs', marker='x', linestyle='--')
+    ax.plot(results_df['date'], results_df['actual'], label='Actual Kurs', marker='o', linestyle='-', color='#609752')
+    ax.plot(results_df['date'], results_df['predicted'], label='Predicted Kurs', marker='x', linestyle='--', color='#F5E054')
 
     ax.set_title('Actual vs. Predicted Kurs')
     ax.set_xlabel('Datum')
