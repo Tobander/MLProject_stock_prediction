@@ -95,8 +95,21 @@ async def run_predictions(csv_file):
     results = await make_predictions(csv_file)
     return results
 
-
-
+# ----------------------------------------------------------
+# ZUSATZFUNKTION: KURZE UNTERNEHMENS-ZUSAMMENFASSUNG
+# ----------------------------------------------------------
+async def get_company_summary(company_name):
+    client = AsyncOpenAI(api_key=API_KEY)
+    prompt = f"Bitte erstelle eine kurze Zusammenfassung des Unternehmens {company_name} in ein bis zwei Sätzen. Auf ENGLISCH bitte."
+    completion = await client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": "Du bist ein Assistent für Finanzinformationen."},
+            {"role": "user", "content": prompt}
+        ]
+    )
+    response = completion.choices[0].message.content.strip()
+    return response
 
 # ----------------------------------------------------------
 # STREAMLIT APP
@@ -136,6 +149,10 @@ start_date = end_date - timedelta(days=365)
 st.sidebar.info(f"Zeitraum: {start_date.strftime('%d.%m.%Y')} bis {end_date.strftime('%d.%m.%Y')}")
 
 st.title(f"Predictions for {long_name}")
+
+# Hier holen wir uns die Kurze Unternehmenszusammenfassung
+company_summary = asyncio.run(get_company_summary(long_name))
+st.write(company_summary)
 
 # Button to load data and run predictions
 if st.button("Fetch Data and Run Predictions"):
@@ -195,4 +212,4 @@ if st.button("Fetch Data and Run Predictions"):
         else:
             st.write("Keine Ergebnisse.")
     else:
-        st.error("FError beim Abholen der Daten.")
+        st.error("Fehler beim Abholen der Daten.")
