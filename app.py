@@ -72,7 +72,6 @@ async def make_predictions(csv_file):
         predicted_price, prediction_date = await task
         if predicted_price is not None:
             actual_price = df.iloc[start_idx]['Close']
-            # Compute direction correctness:
             last_historical_price = df.iloc[start_idx - 1]['Close']
             predicted_direction = predicted_price - last_historical_price
             actual_direction = actual_price - last_historical_price
@@ -100,7 +99,7 @@ async def run_predictions(csv_file):
 # ----------------------------------------------------------
 async def get_company_summary(company_name):
     client = AsyncOpenAI(api_key=API_KEY)
-    prompt = f"Bitte erstelle eine kurze Zusammenfassung des Unternehmens {company_name} in ein bis zwei Sätzen. Auf ENGLISCH bitte."
+    prompt = f"Bitte erstelle eine kurze Zusammenfassung des Unternehmens {company_name} in ein bis zwei Sätzen. Auf PATOIS bitte."
     completion = await client.chat.completions.create(
         model="gpt-4o",
         messages=[
@@ -131,7 +130,7 @@ tickers_data = load_tickers_from_json("Data/ticker_jamaican.json")
 options = [f"{entry['ticker']} - {entry['name']}" for entry in tickers_data]
 
 # Titel der App ändern
-st.set_page_config(page_title="TOBANDER Stock App", page_icon="📈")
+st.set_page_config(page_title="TOBANDER Stock App", page_icon="🇯🇲")
 
 # Sidebar with Ticker dropdown
 st.sidebar.title("Choose Company 🇯🇲")
@@ -150,12 +149,12 @@ st.sidebar.info(f"Zeitraum: {start_date.strftime('%d.%m.%Y')} bis {end_date.strf
 
 st.title(f"Predictions for {long_name}")
 
-# Hier holen wir uns die Kurze Unternehmenszusammenfassung
-company_summary = asyncio.run(get_company_summary(long_name))
-st.write(company_summary)
-
-# Button to load data and run predictions
-if st.button("Fetch Data and Run Predictions"):
+# Button to load company summary and predictions in the sidebar
+if st.sidebar.button("Fetch Company Summary and Run Predictions"):
+    # Fetch company summary
+    company_summary = asyncio.run(get_company_summary(long_name))
+    st.write(company_summary)
+    
     # Fetch historical stock price data
     hist_data, long_name = get_stock_price_range(ticker, start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d'))
     
@@ -163,7 +162,7 @@ if st.button("Fetch Data and Run Predictions"):
         # Save data to CSV
         csv_file = f"Data/{ticker}_stock_prices.csv"
         save_to_csv(hist_data, csv_file, long_name)
-        st.success(f"Data fetched and saved for {long_name}!")
+        st.success(f"Data fetch an save fi {long_name}!")
         
         # Run predictions
         results = asyncio.run(run_predictions(csv_file))
