@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import json
 import altair as alt
 import yfinance as yf
+import os
 
 # FUNKTION, UM FILES ZU ÖFFNEN
 def open_file(filepath):
@@ -17,6 +18,29 @@ def load_ticker_list(json_file):
     with open(json_file, 'r', encoding='utf-8') as f:
         ticker_dict = json.load(f)
     return ticker_dict
+
+# FUNKTION, UM HISTORISCHE DATEN FÜR BESTIMMTE COMPANY ZU LADEN
+def get_stock_price_range_from_json(ticker, start_date, end_date):
+    try:
+        # Construct the file path for the JSON file
+        json_file = f"Json/{ticker}_data.json"
+        if not os.path.exists(json_file):
+            raise FileNotFoundError(f"JSON file for ticker {ticker} not found.")
+
+        # Load JSON data into a DataFrame
+        df = pd.read_json(json_file)
+        print("JSON loaded successfully")
+
+        # Check if data exists after filtering
+        if df.empty:
+            raise ValueError(f"No data available for ticker {ticker} in the given date range.")
+
+        return df, ticker  # Return filtered data and the ticker name
+
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        return None, f"Error loading data for {ticker}: {str(e)}"
+
 
 # FUNKTION, UM HISTORISCHE DATEN FÜR BESTIMMTE COMPANY ZU LADEN
 def get_stock_price_range(ticker: str, start_date: str, end_date: str) -> tuple[pd.DataFrame, str]:
