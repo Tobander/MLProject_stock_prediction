@@ -1,0 +1,586 @@
+[
+    {
+        "long_name": "WISYNCO GROUP LTD ORDINARY SHARES",
+        "ticker": "WISYNCO"
+    },
+    {
+        "long_name": "CARIBBEAN PRODUCERS JAMAICA LIMITED",
+        "ticker": "CPJ"
+    },
+    {
+        "long_name": "SEPROD LIMITED",
+        "ticker": "SEP"
+    },
+    {
+        "long_name": "138 STUDENT LIVING JAMAICA LIMITED",
+        "ticker": "138SL"
+    },
+    {
+        "long_name": "STERLING INVESTMENTS LIMITED USD",
+        "ticker": "SIL"
+    },
+    {
+        "long_name": "KNUTSFORD EXPRESS SERVICES LIMITED",
+        "ticker": "KEX"
+    },
+    {
+        "long_name": "JMMB GROUP 7.25% VR JMD CR PREFERENCE SHARES",
+        "ticker": "JMMBGL7.25C"
+    },
+    {
+        "long_name": "PROVEN GROUP LIMITED USD",
+        "ticker": "PROVEN"
+    },
+    {
+        "long_name": "ISP FINANCE SERVICES LIMITED",
+        "ticker": "ISP"
+    },
+    {
+        "long_name": "EXPRESS CATERING LTD 8.50% FR USD SENIOR UNSECURED BOND DUE MAR 2027",
+        "ticker": "ECL8.50FR2027"
+    },
+    {
+        "long_name": "MAYBERRY INVESTMENTS LIMITED $2.06B 10.75% FR SECURED BOND DUE MARCH 2026",
+        "ticker": "MIL10.75FR2026"
+    },
+    {
+        "long_name": "FIRST ROCK REAL ESTATE INVESTMENTS LIMITED",
+        "ticker": "FIRSTROCKJMD"
+    },
+    {
+        "long_name": "MAYBERRY JAMAICAN EQUITIES LTD 10.5% FR SECURED BOND TRANCHE 3 DUE JUNE 2027",
+        "ticker": "MJE10.5FR2027T3"
+    },
+    {
+        "long_name": "JAMAICA PUBLIC SERVICE 5% D",
+        "ticker": "JPS5D"
+    },
+    {
+        "long_name": "JMMB GROUP LIMITED 7.15% CUMULATIVE REDEEMABLE PREFERENCE SHARE",
+        "ticker": "JMMBGL7.15"
+    },
+    {
+        "long_name": "QWI INVESTMENTS LIMITED",
+        "ticker": "QWI"
+    },
+    {
+        "long_name": "JAMAICA PUBLIC SERVICE CO. LTD. 7%",
+        "ticker": "JPS7"
+    },
+    {
+        "long_name": "JMMB GROUP 5.50% FR USD CR PREFERENCE SHARES",
+        "ticker": "JMMBGL5.50NC"
+    },
+    {
+        "long_name": "VM FINANCIAL GROUP VARIABLE PREFERENCE SHARE – CLASS B",
+        "ticker": "VMFGVR2025B"
+    },
+    {
+        "long_name": "SEPROD LIMITED J$1.7BN UNSECURED FIXED RATE CORPORATE BONDS",
+        "ticker": "SEPROD6.75FR2031"
+    },
+    {
+        "long_name": "DOLLA FINANCIAL SERVICES TRANCHE II DUE OCTOBER 2027",
+        "ticker": "DOLLA11.75VR2027"
+    },
+    {
+        "long_name": "MAYBERRY INVESTMENTS LIMITED J$2.282B 11% FR SECURED BOND DUE JAN 2025- TRANCHE 3",
+        "ticker": "MIL11FR2025T3"
+    },
+    {
+        "long_name": "PRODUCTIVE BUSINESS SOLUTIONS LTD 9.75% CUMULATIVE REDEEMABLE",
+        "ticker": "PBS9.75"
+    },
+    {
+        "long_name": "MAIN EVENT ENTERTAINMENT GROUP",
+        "ticker": "MEEG"
+    },
+    {
+        "long_name": "AMG PACKAGING  & PAPER COMPANY LIMITED",
+        "ticker": "AMG"
+    },
+    {
+        "long_name": "TTECH LIMITED",
+        "ticker": "TTECH"
+    },
+    {
+        "long_name": "EDUFOCAL LIMITED",
+        "ticker": "LEARN"
+    },
+    {
+        "long_name": "MAYBERRY INVESTMENTS LIMITED J$1.981B 12% FR SECURED BOND DUE JAN 2026- TRANCHE 4",
+        "ticker": "MIL12FR2026T4"
+    },
+    {
+        "long_name": "KINGSTON WHARVES LIMITED",
+        "ticker": "KW"
+    },
+    {
+        "long_name": "EPPLEY LIMITED 7.75% PREFERENCE SHARES",
+        "ticker": "EPLY7.75"
+    },
+    {
+        "long_name": "MAYBERRY GROUP LTD.",
+        "ticker": "MGL"
+    },
+    {
+        "long_name": "KINTYRE HOLDINGS",
+        "ticker": "JA) LIMITED"
+    },
+    {
+        "long_name": "SYGNUS CREDIT INVESTMENTS LIMITED USD",
+        "ticker": "SCIUSD) ORDINARY SHARES"
+    },
+    {
+        "long_name": "TRANSJAMAICAN HIGHWAY LTD 8%",
+        "ticker": "TJH8.0"
+    },
+    {
+        "long_name": "SALADA FOODS JAMAICA LTD.",
+        "ticker": "SALF"
+    },
+    {
+        "long_name": "DERRIMON TRADING COMPANY LIMITED",
+        "ticker": "DTL"
+    },
+    {
+        "long_name": "KEY INSURANCE COMPANY LIMITED",
+        "ticker": "KEY"
+    },
+    {
+        "long_name": "GRACEKENNEDY LIMITED",
+        "ticker": "GK"
+    },
+    {
+        "long_name": "CARRERAS LIMITED",
+        "ticker": "CAR"
+    },
+    {
+        "long_name": "BLUE POWER GROUP LIMITED",
+        "ticker": "BPOW"
+    },
+    {
+        "long_name": "SYGNUS REAL ESTATE FINANCIAL LIMITED",
+        "ticker": "JMD)"
+    },
+    {
+        "long_name": "A.S. BRYDEN & SONS HOLDINGS 6.00% CLASS A PREFERENCE SHARE",
+        "ticker": "ASBH6.00"
+    },
+    {
+        "long_name": "MARGARITAVILLE",
+        "ticker": "TURKS) LIMITED USD"
+    },
+    {
+        "long_name": "LUMBER DEPOT LIMITED",
+        "ticker": "LUMBER"
+    },
+    {
+        "long_name": "PALACE AMUSEMENT CO. LTD.",
+        "ticker": "PAL"
+    },
+    {
+        "long_name": "PULSE INVESTMENTS LIMITED",
+        "ticker": "PULS"
+    },
+    {
+        "long_name": "MAILPAC GROUP LIMITED",
+        "ticker": "MAILPAC"
+    },
+    {
+        "long_name": "JMMB GROUP LIMITED",
+        "ticker": "JMMBGL"
+    },
+    {
+        "long_name": "JAMAICA PUBLIC SERVICE CO. 6%",
+        "ticker": "JPS6"
+    },
+    {
+        "long_name": "JAMAICA STOCK EXCHANGE",
+        "ticker": "JSE"
+    },
+    {
+        "long_name": "NCB FINANCIAL GROUP LIMITED",
+        "ticker": "NCBFG"
+    },
+    {
+        "long_name": "OMNI INDUSTRIES LIMITED",
+        "ticker": "OMNI"
+    },
+    {
+        "long_name": "SAGICOR GROUP JAMAICA LIMITED",
+        "ticker": "SJ"
+    },
+    {
+        "long_name": "JMMB GROUP LIMITED 7.35% CUMULATIVE REDEEMABLE PREFERENCE SHARE",
+        "ticker": "JMMBGL7.35"
+    },
+    {
+        "long_name": "FONTANA LIMITED",
+        "ticker": "FTNA"
+    },
+    {
+        "long_name": "RADIO JAMAICA LIMITED",
+        "ticker": "RJR"
+    },
+    {
+        "long_name": "LASCO DISTRIBUTORS LIMITED",
+        "ticker": "LASD"
+    },
+    {
+        "long_name": "JAMAICA BROILERS GROUP LIMITED SENIOR UNSECURED 6.75%",
+        "ticker": "JBL6.75FR2028"
+    },
+    {
+        "long_name": "GUARDIAN HOLDINGS LIMITED",
+        "ticker": "GHL"
+    },
+    {
+        "long_name": "PAN JAMAICA GROUP LIMITED",
+        "ticker": "PJAM"
+    },
+    {
+        "long_name": "JAMAICA PUBLIC SERVICE 5% C",
+        "ticker": "JPS5C"
+    },
+    {
+        "long_name": "EPPLEY LIMITED 7.25% PREFERENCE SHARES",
+        "ticker": "EPLY7.25"
+    },
+    {
+        "long_name": "K.L.E. GROUP LIMITED",
+        "ticker": "KLE"
+    },
+    {
+        "long_name": "SAGICOR SELECT FUNDS LIMITED MANUFACTURING & DISTRIBUTION",
+        "ticker": "SELECTMD"
+    },
+    {
+        "long_name": "CARIBBEAN FLAVOURS & FRAGRANCES LIMITED",
+        "ticker": "CFF"
+    },
+    {
+        "long_name": "EXPRESS CATERING LIMITED",
+        "ticker": "ECL"
+    },
+    {
+        "long_name": "EPPLEY LIMITED",
+        "ticker": "EPLY"
+    },
+    {
+        "long_name": "FOSRICH COMPANY LIMITED",
+        "ticker": "FOSRICH"
+    },
+    {
+        "long_name": "GWEST CORPORATION LIMITED ORDINARY SHARES",
+        "ticker": "GWEST"
+    },
+    {
+        "long_name": "VM FINANCIAL GROUP VARIABLE REDEEMABLE PREFERENCE SHARE – CLASS C",
+        "ticker": "VMFGVR2028C"
+    },
+    {
+        "long_name": "INDIES PHARMA JAMAICA LIMITED ORDINARY SHARES",
+        "ticker": "INDIES"
+    },
+    {
+        "long_name": "IMAGE PLUS CONSULTANTS LIMITED",
+        "ticker": "IPCL"
+    },
+    {
+        "long_name": "SPUR TREE SPICES JAMAICA LIMITED",
+        "ticker": "SPURTREE"
+    },
+    {
+        "long_name": "MAYBERRY JAMAICAN EQUITIES LTD 10% FR SECURED BOND TRANCHE 2 DUE AUG 2026",
+        "ticker": "MJE10FR2026T2"
+    },
+    {
+        "long_name": "PARAMOUNT TRADING",
+        "ticker": "JAMAICA) LIMITED"
+    },
+    {
+        "long_name": "JAMAICA PRODUCERS GROUP LTD.",
+        "ticker": "JP"
+    },
+    {
+        "long_name": "SYGNUS CREDIT INVESTMENTS 8.50% PREFERENCE SHARES DUE 2026 - CLASS E",
+        "ticker": "SCIUSD8.50E"
+    },
+    {
+        "long_name": "ELITE DIAGNOSTIC LIMITED",
+        "ticker": "ELITE"
+    },
+    {
+        "long_name": "MFS CAPITAL PARTNERS LIMITED",
+        "ticker": "MFS"
+    },
+    {
+        "long_name": "TROPICAL BATTERY COMPANY LIMITED",
+        "ticker": "TROPICAL"
+    },
+    {
+        "long_name": "VM FINANCIAL GROUP 10% REDEEMABLE PREFERENCE SHARE – CLASS A",
+        "ticker": "VMFG10R2026A"
+    },
+    {
+        "long_name": "STANLEY MOTTA LIMITED ORDINARY SHARES",
+        "ticker": "SML"
+    },
+    {
+        "long_name": "A.S. BRYDEN & SONS HOLDINGS LIMITED USD",
+        "ticker": "ASBH"
+    },
+    {
+        "long_name": "MARGARITAVILLE",
+        "ticker": "TURKS) LIMITED"
+    },
+    {
+        "long_name": "DOLLA FINANCIAL SERVICES LTD VARIABLE RATE SECURED BOND TRANCHE I DUE OCTOBER 2025",
+        "ticker": "DOLLA10.5VR2025"
+    },
+    {
+        "long_name": "GHL TRANCHE D 7.00% FR UNSECURED NOTE DUE SEPTEMBER 30, 2027",
+        "ticker": "GHLJ_2027BONDS"
+    },
+    {
+        "long_name": "HONEY BUN",
+        "ticker": "1982) LIMITED"
+    },
+    {
+        "long_name": "SUPREME VENTURES LIMITED",
+        "ticker": "SVL"
+    },
+    {
+        "long_name": "EPPLEY CARIBBEAN PROPERTY FUND LIMITED SCC",
+        "ticker": "CPFV"
+    },
+    {
+        "long_name": "STATIONERY AND OFFICE SUPPLIES LIMITED",
+        "ticker": "SOS"
+    },
+    {
+        "long_name": "FUTURE ENERGY SOURCE COMPANY LTD VARIABLE RATE NOTE DEC 2027",
+        "ticker": "FESCOVR2027"
+    },
+    {
+        "long_name": "CARIBBEAN CEMENT COMPANY LTD.",
+        "ticker": "CCC"
+    },
+    {
+        "long_name": "MASSY HOLDINGS LTD",
+        "ticker": "MASSY"
+    },
+    {
+        "long_name": "JFP LIMITED",
+        "ticker": "JFP"
+    },
+    {
+        "long_name": "ONE GREAT STUDIO COMPANY LIMITED",
+        "ticker": "1GS"
+    },
+    {
+        "long_name": "ONE ON ONE EDUCATIONAL SERVICES LIMITED",
+        "ticker": "ONE"
+    },
+    {
+        "long_name": "ACCESS FINANCIAL SERVICES LIMITED",
+        "ticker": "AFS"
+    },
+    {
+        "long_name": "MPC CARIBBEAN CLEAN ENERGY LIMITED USD",
+        "ticker": "MPCCEL"
+    },
+    {
+        "long_name": "INNOVATIVE ENERGY GROUP LIMITED",
+        "ticker": "ENERGY"
+    },
+    {
+        "long_name": "SYGNUS CREDIT INVESTMENTS LIMITED JMD",
+        "ticker": "SCIJMD) ORDINARY SHARES"
+    },
+    {
+        "long_name": "TRANSJAMAICAN HIGHWAY LIMITED",
+        "ticker": "TJH"
+    },
+    {
+        "long_name": "JMMB GROUP 7.00% VR JMD CR PREFERENCE SHARES",
+        "ticker": "JMMBGL7.00NC"
+    },
+    {
+        "long_name": "JMMB 7.5% JMD PREFERENCE SHARES",
+        "ticker": "JMMB7.50"
+    },
+    {
+        "long_name": "JAMAICAN TEAS LIMITED",
+        "ticker": "JAMT"
+    },
+    {
+        "long_name": "R.A. WILLIAMS DISTRIBUTORS LIMITED",
+        "ticker": "RAWILL"
+    },
+    {
+        "long_name": "WIGTON ENERGY LIMITED",
+        "ticker": "WIG"
+    },
+    {
+        "long_name": "JAMAICA BROILERS GROUP",
+        "ticker": "JBG"
+    },
+    {
+        "long_name": "FUTURE ENERGY SOURCE COMPANY LTD ORDINARY SHARES",
+        "ticker": "FESCO"
+    },
+    {
+        "long_name": "CARIBBEAN CREAM LIMITED",
+        "ticker": "KREMI"
+    },
+    {
+        "long_name": "PRODUCTIVE BUSINESS SOLUTIONS LTD 10.50% PERPETUAL CUMULATIVE REDEEMABLE J$ PREFERENCE SHARE",
+        "ticker": "PBS10.50"
+    },
+    {
+        "long_name": "LASCO MANUFACTURING LIMITED",
+        "ticker": "LASM"
+    },
+    {
+        "long_name": "REGENCY PETROLEUM CO. LIMITED",
+        "ticker": "RPL"
+    },
+    {
+        "long_name": "VM INVESTMENTS LIMITED",
+        "ticker": "VMIL"
+    },
+    {
+        "long_name": "FUTURE ENERGY SOURCE COMPANY LIMITED FR BOND DUE MARCH 2027",
+        "ticker": "FESCO7.5%FR8MAR27"
+    },
+    {
+        "long_name": "PRODUCTIVE BUSINESS SOLUTION LTD USD ORDINARY SHARES",
+        "ticker": "PBS"
+    },
+    {
+        "long_name": "JAMAICA PUBLIC SERVICE CO. 9.5%",
+        "ticker": "JPS9.5"
+    },
+    {
+        "long_name": "PORTLAND JSX LIMITED",
+        "ticker": "PJX"
+    },
+    {
+        "long_name": "JETCON CORPORATION LIMITED",
+        "ticker": "JETCON"
+    },
+    {
+        "long_name": "MEDICAL DISPOSABLES & SUPPLIES LIMITED",
+        "ticker": "MDS"
+    },
+    {
+        "long_name": "SCOTIA GROUP JAMAICA LIMITED",
+        "ticker": "SGJ"
+    },
+    {
+        "long_name": "KINGSTON PROPERTIES LIMITED",
+        "ticker": "KPREIT"
+    },
+    {
+        "long_name": "SAGICOR SELECT FUNDS LIMITED - FINANCIAL",
+        "ticker": "SELECTF"
+    },
+    {
+        "long_name": "BERGER PAINTS JAMAICA LTD.",
+        "ticker": "BRG"
+    },
+    {
+        "long_name": "138 STUDENT LIVING JAMAICA LIMITED VARIABLE PREFERENCE",
+        "ticker": "138SLVR"
+    },
+    {
+        "long_name": "CAC 2000 LIMITED",
+        "ticker": "CAC"
+    },
+    {
+        "long_name": "JMMB GROUP LIMITED 9.50%",
+        "ticker": "JMMBGL9.50"
+    },
+    {
+        "long_name": "BARITA INVESTMENTS LIMITED",
+        "ticker": "BIL"
+    },
+    {
+        "long_name": "MAYBERRY JAMAICAN EQUITIES LIMITED",
+        "ticker": "MJE"
+    },
+    {
+        "long_name": "SAGICOR REAL ESTATE X FUND LTD.",
+        "ticker": "XFUND"
+    },
+    {
+        "long_name": "ACCESS FINANCIAL SERVICES LTD. J$2B UNSECURED FIXED TO FLOATING RATE BOND DUE 2027",
+        "ticker": "AFS11%JUL27"
+    },
+    {
+        "long_name": "GHL TRANCHE B 6.50% FR UNSECURED NOTE DUE SEPTEMBER 30, 2025",
+        "ticker": "GHLJ_2025BONDS"
+    },
+    {
+        "long_name": "DOLLA FINANCIAL SERVICES LIMITED",
+        "ticker": "DOLLA"
+    },
+    {
+        "long_name": "SYGNUS CREDIT INVESTMENTS 10.50% PREFERENCE SHARES DUE 2025 - CLASS C",
+        "ticker": "SCIJMD10.50C"
+    },
+    {
+        "long_name": "CARIBBBEAN ASSURANCE BROKERS LIMITED",
+        "ticker": "CABROKERS"
+    },
+    {
+        "long_name": "JMMB 6.0% USD PREFERENCE SHARES",
+        "ticker": "JMMBUS6.00"
+    },
+    {
+        "long_name": "IRONROCK INSURANCE COMPANY LIMITED",
+        "ticker": "ROC"
+    },
+    {
+        "long_name": "EVERYTHING FRESH LIMITED",
+        "ticker": "EFRESH"
+    },
+    {
+        "long_name": "TRANSJAMAICAN HIGHWAY LIMITED",
+        "ticker": "USD)"
+    },
+    {
+        "long_name": "LASCO FINANCIAL SERVICES LIMITED",
+        "ticker": "LASF"
+    },
+    {
+        "long_name": "JMMB GROUP 5.75% FR USD CR PREFERENCE SHARES",
+        "ticker": "JMMBGL5.75C"
+    },
+    {
+        "long_name": "MAYBERRY JAMAICAN EQUITIES LTD 9.25% FR SECURED BOND TRANCHE 1 DUE JULY 2025",
+        "ticker": "MJE9.25FR2025T1"
+    },
+    {
+        "long_name": "SYGNUS CREDIT INVESTMENTS 8.00% PREFERENCE SHARES DUE 2025 - CLASS D",
+        "ticker": "SCIUSD8.00D"
+    },
+    {
+        "long_name": "CARGO HANDLERS LIMITED",
+        "ticker": "CHL"
+    },
+    {
+        "long_name": "DOLPHIN COVE LIMITED",
+        "ticker": "DCOVE"
+    },
+    {
+        "long_name": "JMMB GROUP LIMITED 8.50% USD",
+        "ticker": "JMMBGLUSD8.50"
+    },
+    {
+        "long_name": "THE LIMNERS AND BARDS LIMITED",
+        "ticker": "LAB"
+    }
+]
