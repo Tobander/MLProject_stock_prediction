@@ -58,16 +58,25 @@ async def get_prediction(client, prices, date, semaphore):
 # FUNKTION: MEHRERE VORHERSAGEN ERSTELLEN
 # ----------------------------------------------------------
 async def make_predictions(json_file):
+    # READ IN DATA FROM JSON FILE
     df = pd.read_json(json_file, encoding="utf-8")
+
+    # FORMAT DATE AS DATETIME
     df['date'] = pd.to_datetime(df['date'], utc=True)
+
+    # SORT DATAFRAME BY DATE
+    df = df.sort_values(by='date', ascending=False)
     
+    # INITIALIZE CLIENT AND SEMAPHORE
     client = AsyncOpenAI(api_key=API_KEY)
     semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
-
-    valid_indices = list(range(DATA_RANGE, len(df) - 1))
+    
+    # GET LAST DATA_RANGE DAYS
+    valid_indices = list(range(DATA_RANGE, len(df)))
     selected_indices = random.sample(valid_indices, NUM_PREDICTIONS)
     
     tasks = []
+    # LOOP OVER LAST DATA_RANGE DAYS
     for start_idx in selected_indices:
         historical_slice = df.iloc[start_idx - DATA_RANGE:start_idx]
         historical_data = historical_slice['Closing Price ($)'].tolist()
@@ -101,8 +110,8 @@ async def make_predictions(json_file):
 # ----------------------------------------------------------
 # HAUPTFUNKTION
 # ----------------------------------------------------------
-async def run_predictions(csv_file):
-    results = await make_predictions(csv_file)
+async def run_predictions(json_file):
+    results = await make_predictions(json_file)
     return results
 
 # ----------------------------------------------------------
@@ -172,7 +181,7 @@ if st.sidebar.button("Fetch Company Summary and Run Predictions"):
     if hist_data is not None:
         
         # Make Predictions using JSON file
-        csv_file = f"Json/{ticker}_data.json"
+        json_file = f"Json/{ticker}_data.json"
         st.success(f"Data loaded successfully for {ticker_or_error}!")
         
         # HISTORICAL KURSE BERECHNEN
@@ -185,7 +194,7 @@ if st.sidebar.button("Fetch Company Summary and Run Predictions"):
         arrow = "⬆️" if todays_diff > 0 else "⬇️" if todays_diff < 0 else "➖"
         
         # Run predictions
-        results = run_asyncio_task(run_predictions(csv_file))
+        results = run_asyncio_task(run_predictions(json_file))
         
         if results:
             # DataFrame to Display the results
@@ -210,6 +219,7 @@ if st.sidebar.button("Fetch Company Summary and Run Predictions"):
             latest_date = hist_data['date'].max()
             day_before = latest_date - timedelta(days=1)
             year_before = latest_date - timedelta(days=366)
+            current_date = latest_date + timedelta(days=1)
             
             close_max = hist_data['Closing Price ($)'].max()
             close_min = hist_data['Closing Price ($)'].min()
@@ -218,17 +228,28 @@ if st.sidebar.button("Fetch Company Summary and Run Predictions"):
             st.write(f"📅 **Current Stock Price ({latest_date.strftime('%Y-%m-%d')}):** {latest_price:.2f} $ ({arrow}{todays_diff:.2f})")
             st.write(f"🔙 **Yesterday's Stock Price ({day_before.strftime('%Y-%m-%d')}):** {yesterday_price:.2f} $")
             st.write(f"⏮️ **Stock Price Last Year ({year_before.strftime('%Y-%m-%d')}):** {last_year_price:.2f} $")
+            st.write(f"🆕 **Tomorrow's Prediction ({current_date}):** {results_df['predicted'].iloc[-1]}")
+            
+            # Vorhersage für den nächsten Tag extrahieren
+            # next_day_prediction = results_df[results_df['date'] == (latest_date + timedelta(days=1)).strftime('%d-%m-%Y')]
+            # if not next_day_prediction.empty:
+            #     predicted_price_next_day = float(next_day_prediction.iloc[0]['predicted'].replace('$', '').replace(',', ''))
+            #     if predicted_price_next_day > latest_price:
+            #         st.write(f"**Vorhersage für morgen ({(latest_date + timedelta(days=1)).strftime('%Y-%m-%d')}):** Der Kurs wird steigen.")
+            #     elif predicted_price_next_day < latest_price:
+            #         st.write(f"**Vorhersage für morgen ({(latest_date + timedelta(days=1)).strftime('%Y-%m-%d')}):** Der Kurs wird fallen.")
+            #     else:
+            #         st.write(f"**Vorhersage für morgen ({(latest_date + timedelta(days=1)).strftime('%Y-%m-%d')}):** Der Kurs bleibt gleich.")
+            # else:
+            #     st.write("🔮 **Vorhersage für morgen:** Keine Vorhersage verfügbar.")
+            
             
             # Display Line Chart
             line_chart = alt.Chart(hist_data).mark_line().encode(
                 x=alt.X('date:T', title='', axis=alt.Axis(format='%Y-%m')),  # Format x-axis labels
                 y=alt.Y('Closing Price ($):Q', title='Closing Price ($)', scale=alt.Scale(domain=[close_min, close_max])),  # Set y-axis limits here
                 tooltip=['date:T', 'Closing Price ($):Q']  # Add tooltip for interactivity
-            ).properties(
-                title="Closing Price",
-                width=700,
-                height=400
-            )
+            ).properties(width=700, height=400)
 
             # Display the Altair chart in Streamlit
             st.altair_chart(line_chart, use_container_width=True)
